@@ -1,5 +1,7 @@
 function reverseString(string) {
-  return string.split("").reverse().join("");
+  return typeof string === "string"
+    ? string.split("").reverse().join("")
+    : "invalid string";
 }
 
 export default reverseString;

@@ -2,6 +2,10 @@ import { describe, expect, test } from "@jest/globals";
 import reverseString from "../components/reverseString";
 
 describe("reverseString module", () => {
+  test("invalid string", () => {
+    expect(reverseString(2312)).toBe("invalid string");
+  });
+
   test("single word", () => {
     expect(reverseString("batmobile")).toBe("elibomtab");
   });
