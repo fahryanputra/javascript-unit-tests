@@ -6,6 +6,10 @@ describe("reverseString module", () => {
     expect(reverseString(2312)).toBe("invalid string");
   });
 
+  test("empty string", () => {
+    expect(reverseString("")).toBe("");
+  });
+
   test("single word", () => {
     expect(reverseString("batmobile")).toBe("elibomtab");
   });

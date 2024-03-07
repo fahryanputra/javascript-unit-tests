@@ -2,6 +2,14 @@ import { describe, expect, test } from "@jest/globals";
 import capitalize from "../components/capitalize";
 
 describe("capitalize module", () => {
+  test("invalid string", () => {
+    expect(capitalize(1234)).toBe("invalid string");
+  });
+
+  test("empty string", () => {
+    expect(capitalize("")).toBe("");
+  });
+
   test("capitalize first letter", () => {
     expect(capitalize("test")).toBe("Test");
   });
