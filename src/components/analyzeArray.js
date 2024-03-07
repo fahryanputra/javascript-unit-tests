@@ -1,8 +1,7 @@
 function isValidArray(array) {
-  if (!Array.isArray(array) || array.some(isNaN) || array.length === 0)
-    return false;
-
-  return true;
+  return !Array.isArray(array) || array.some(isNaN) || array.length === 0
+    ? false
+    : true;
 }
 
 function analyzeArray(array) {
