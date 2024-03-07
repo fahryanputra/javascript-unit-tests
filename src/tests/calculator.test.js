@@ -2,6 +2,10 @@ import { describe, expect, test } from "@jest/globals";
 import calculator from "../components/calculator";
 
 describe("calculator module", () => {
+  test("invalid number", () => {
+    expect(calculator.add(2, "a")).toBe("invalid number");
+  });
+
   test("add number", () => {
     expect(calculator.add(2, 3)).toBe(5);
   });
